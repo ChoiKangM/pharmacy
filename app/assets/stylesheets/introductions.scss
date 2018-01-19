@@ -21,10 +21,64 @@
 //     -webkit-background-size: cover;
 //     background-size: cover;
 // }
+
+//고화질
+// .introduction{
+//     position: relative;
+//     height: 60em;
+//     background: url(asset-path('introductions/1.jpg')) no-repeat center center fixed;
+//     -ms-background-size: cover;
+//     -o-background-size: cover;
+//     -moz-background-size: cover;
+//     -webkit-background-size: cover;
+//     background-size: cover;
+// }
+// .alumnus{
+//     position: relative;
+//     height: 60em;
+//     background: url(asset-path('introductions/2.jpg')) no-repeat center center fixed;
+//     -ms-background-size: cover;
+//     -o-background-size: cover;
+//     -moz-background-size: cover;
+//     -webkit-background-size: cover;
+//     background-size: cover;
+// }
+// .graduate{
+//     position: relative;
+//     height: 60em;
+//     background: url(asset-path('introductions/3.png')) no-repeat center center fixed;
+//     -ms-background-size: cover;
+//     -o-background-size: cover;
+//     -moz-background-size: cover;
+//     -webkit-background-size: cover;
+//     background-size: cover;
+// }
+// .council{
+//     position: relative;
+//     height: 60em;
+//     background: url(asset-path('introductions/4.jpg')) no-repeat center center fixed;
+//     -ms-background-size: cover;
+//     -o-background-size: cover;
+//     -moz-background-size: cover;
+//     -webkit-background-size: cover;
+//     background-size: cover;
+// }
+// .hobby{
+//     position: relative;
+//     height: 60em;
+//     background: url(asset-path('introductions/5.jpg')) no-repeat center center fixed;
+//     -ms-background-size: cover;
+//     -o-background-size: cover;
+//     -moz-background-size: cover;
+//     -webkit-background-size: cover;
+//     background-size: cover;
+// }
+
+//중화질
 .introduction{
     position: relative;
     height: 60em;
-    background: url(asset-path('introductions/1.png')) no-repeat center center fixed;
+    background: url(asset-path('introductions/1_2.jpg')) no-repeat center center fixed;
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -34,7 +88,7 @@
 .alumnus{
     position: relative;
     height: 60em;
-    background: url(asset-path('introductions/2.png')) no-repeat center center fixed;
+    background: url(asset-path('introductions/2_2.jpg')) no-repeat center center fixed;
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -44,7 +98,7 @@
 .graduate{
     position: relative;
     height: 60em;
-    background: url(asset-path('introductions/3.png')) no-repeat center center fixed;
+    background: url(asset-path('introductions/3_2.png')) no-repeat center center fixed;
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -54,7 +108,17 @@
 .council{
     position: relative;
     height: 60em;
-    background: url(asset-path('introductions/4.jpg')) no-repeat center center fixed;
+    background: url(asset-path('introductions/4_2.jpg')) no-repeat center center fixed;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.hobby{
+    position: relative;
+    height: 60em;
+    background: url(asset-path('introductions/5_2.jpg')) no-repeat center center fixed;
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;

@@ -3,7 +3,7 @@ class HandoutsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   
   def index
-    @handouts = Handout.order(created_at: :DESC).page(params[:page]).per(1)
+    @handouts = Handout.order(created_at: :DESC).page(params[:page]).per(12)
   end
 
   def show

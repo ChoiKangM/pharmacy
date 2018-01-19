@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -20,9 +19,8 @@ ActiveRecord::Schema.define(version: 20171122061857) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cards_on_user_id"
   end
-
-  add_index "cards", ["user_id"], name: "index_cards_on_user_id"
 
   create_table "creplies", force: :cascade do |t|
     t.text     "content"
@@ -30,10 +28,9 @@ ActiveRecord::Schema.define(version: 20171122061857) do
     t.integer  "card_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_creplies_on_card_id"
+    t.index ["user_id"], name: "index_creplies_on_user_id"
   end
-
-  add_index "creplies", ["card_id"], name: "index_creplies_on_card_id"
-  add_index "creplies", ["user_id"], name: "index_creplies_on_user_id"
 
   create_table "handouts", force: :cascade do |t|
     t.string   "title"
@@ -42,9 +39,8 @@ ActiveRecord::Schema.define(version: 20171122061857) do
     t.string   "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_handouts_on_user_id"
   end
-
-  add_index "handouts", ["user_id"], name: "index_handouts_on_user_id"
 
   create_table "hreplies", force: :cascade do |t|
     t.text     "content"
@@ -52,10 +48,9 @@ ActiveRecord::Schema.define(version: 20171122061857) do
     t.integer  "handout_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["handout_id"], name: "index_hreplies_on_handout_id"
+    t.index ["user_id"], name: "index_hreplies_on_user_id"
   end
-
-  add_index "hreplies", ["handout_id"], name: "index_hreplies_on_handout_id"
-  add_index "hreplies", ["user_id"], name: "index_hreplies_on_user_id"
 
   create_table "notices", force: :cascade do |t|
     t.string   "title"
@@ -63,9 +58,8 @@ ActiveRecord::Schema.define(version: 20171122061857) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notices_on_user_id"
   end
-
-  add_index "notices", ["user_id"], name: "index_notices_on_user_id"
 
   create_table "nreplies", force: :cascade do |t|
     t.text     "content"
@@ -73,10 +67,9 @@ ActiveRecord::Schema.define(version: 20171122061857) do
     t.integer  "notice_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["notice_id"], name: "index_nreplies_on_notice_id"
+    t.index ["user_id"], name: "index_nreplies_on_user_id"
   end
-
-  add_index "nreplies", ["notice_id"], name: "index_nreplies_on_notice_id"
-  add_index "nreplies", ["user_id"], name: "index_nreplies_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
@@ -95,9 +88,8 @@ ActiveRecord::Schema.define(version: 20171122061857) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

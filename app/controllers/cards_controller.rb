@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   before_action :find_card, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
   def index
-    @cards = Card.order(created_at: :DESC).page(params[:page]).per(4)
+    @cards = Card.order(created_at: :DESC).page(params[:page]).per(16)
   end
 
   def show

@@ -6,7 +6,7 @@
       <h4 class="col-md-2 col-6"><%= distance_of_time_in_words(@notice.created_at, Time.now) %> 전</h4>
     </div>
     <div class="card-body">
-      <p class="card-text"><%= @notice.content %></p>
+      <p class="card-text"><%= @notice.content.html_safe %></p>
       <% if current_user.id == @notice.user.id %>
         <%= link_to fa_icon("pencil 2x"), edit_notice_path(@notice), class: "btn btn-warning" %>
         <%= link_to fa_icon("trash-o 2x"), notice_path(@notice), method: :delete, class: "btn btn-danger"%>

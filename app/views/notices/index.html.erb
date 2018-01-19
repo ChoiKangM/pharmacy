@@ -1,17 +1,21 @@
 <header class="w-100">
     <div class="container h-100 d-flex flex-column justify-content-center">
+      <div class="d-flex flex-row justify-content-between">
         <h2>공지사항</h2>
-        <%= link_to "글쓰기", new_notice_path, class: "btn btn-primary" %>
+        <p align="right">
+          <%= link_to "글쓰기", new_notice_path, class: "btn btn-info" %>
+        </p>
         <% #TODO: 배경사진 바꾸기 %>
+      </div>
     </div>
 </header>
 <section class="container">
   <div class="pt-3 pt-md-4 mt-2">
     <div class="row py-2 bt-gray-1 bb-gray-1 bg-gray-dark d-none d-sm-flex">
-      <div class="col-6 col-sm-5 col-lg-8 col-xl-8 mb-1 mb-sm-0 font-size-base-xs-down">
+      <div class="col-6 col-sm-5 col-lg-7 col-xl-7 mb-1 mb-sm-0 font-size-base-xs-down">
         <h6>제목</h6>
       </div>
-      <div class="col-2 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
+      <div class="col-2 col-sm-2 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <h6>글쓴이</h6>
       </div>
       <div class="col-2 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
@@ -24,10 +28,10 @@
   </div>
   <% @notices.each do |n| %>
     <div class="row">
-      <div class="col-12 col-sm-5 col-lg-8 col-xl-8 m-0">
+      <div class="col-12 col-sm-5 col-lg-7 col-xl-7 m-0">
         <%= link_to n.title, notice_path(n) %>
       </div>
-      <div class="col-4 col-sm-2 col-lg-1 col-xl-1 text-left text-sm-center text-color-warm-gray-xs-down">
+      <div class="col-4 col-sm-2 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
         <%= n.user.nickname %>
       </div>
       <div class="col-4 col-sm-3 col-lg-2 col-xl-2 text-left text-sm-center text-color-warm-gray-xs-down">
