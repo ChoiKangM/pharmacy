@@ -1,23 +1,45 @@
-<div class="jumbotron mt-4">
-  <nav class="nav navbar-dark">
-    <a class="nav-link footer-link pl-1" href="#">FOLLOW US</a>
-    <%= link_to fa_icon("facebook"), root_path, class: "nav-link footer-link" %>
-    <%= link_to fa_icon("google"), root_path, class: "nav-link footer-link" %>
-    <%= link_to fa_icon("youtube-play"), root_path, class: "nav-link footer-link" %>
-  </nav>
-  <hr class="my-3">
-  <nav class="nav navbar-dark justify-content-between">
-    <div class="footer-knup d-inline-flex">
-      <a class="navbar-brand" href="#" style="font-size: 1.5rem; color: #3d3d3d">KNUP</a>
-      <%= link_to "개인정보방침", root_path, class: "nav-link footer-link" %>
-      <%= link_to "이용약관", root_path, class: "nav-link footer-link" %>
-      <%= link_to "G-suite", root_path, class: "nav-link footer-link" %>
+<footer class="p-0">
+  <div class="jumbotron m-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-2">
+          <h6 class="nav-link footer-link my-auto">FOLLOW US</h6>
+        </div>
+        <div class="col-md-3 mb-2 text-center d-flex flex-row justify-content-center">
+            <%= link_to fa_icon("facebook"), root_path, class: "nav-link footer-link" %>  
+            <%= link_to fa_icon("google"), root_path, class: "nav-link footer-link" %>  
+            <%= link_to fa_icon("youtube-play"), root_path, class: "nav-link footer-link" %>
+        </div>
+        <div class="col-md-2 footer-knup d-flex flex-column">
+          <p>  
+            <a class="navbar-brand mt-2 p-0" href="#" style="font-size: 1.5rem; color: #3d3d3d">KNUP</a>
+          </p>  
+        </div>
+        <div class="col-md-4 d-flex flex-row">
+          <div class="col-md-6">
+            <p>  
+              <%= link_to "개인정보", root_path, class: "nav-link footer-link" %>    
+            </p>  
+            <p class ="m-0">  
+              <%= link_to "이용약관", root_path, class: "nav-link footer-link" %>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p>  
+              <%= link_to "G-suite", root_path, class: "nav-link footer-link" %>
+            </p>  
+            <p class ="m-0">
+              <%= link_to fa_icon("question-circle", text: "Help"), root_path, class: "nav-link footer-link" %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-3">
+      <div class="row justify-content-center">
+          <p class="mt-1" style="color: #3d3d3d">
+            Copyright © 2011. KNUP.  All rights reserved.
+          </p>
+      </div>
     </div>
-    <div class="footer-help">
-      <%= link_to fa_icon("question-circle", text: "Help"), root_path, class: "nav-link footer-link" %>
-    </div>
-  </nav>
-  <p class="mt-1" style="color: #3d3d3d">
-    Copyright © 2011. KNUP.  All rights reserved.
-  </p>
-</div>
+  </div>
+</footer>
