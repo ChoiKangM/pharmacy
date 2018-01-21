@@ -10,9 +10,8 @@ Rails.application.routes.draw do
   end
   
   devise_for :users
-  get '/introductions/hello', to: "introductions#hello", as: 'hello'
   get '/introductions/user_information', to: 'introductions#user_information', as: 'user_information'
-  root 'introductions#index'
+  root 'introductions#hello'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
