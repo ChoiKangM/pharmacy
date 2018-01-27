@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :nreplies, only: [:create, :destroy]
   end
   
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   get '/introductions/user_information', to: 'introductions#user_information', as: 'user_information'
   root 'introductions#index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -5,6 +5,7 @@ gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 
 gem 'devise'
+gem 'omniauth-google-oauth2'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem "font-awesome-rails"
