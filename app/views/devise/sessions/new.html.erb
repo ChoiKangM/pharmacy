@@ -4,7 +4,7 @@
       <h2><%= t('.sign_in',default: 'Login') %></h2>
     </div>
     <div class="panel-body pt-3">
-      <%#= link_to fa_icon("google", text: "Sign in with Google"), user_google_oauth2_omniauth_authorize_path, class: "btn btn-outline-dark col-md-6 mb-2" %>
+      <%= link_to fa_icon("google", text: "Sign in with Google"), user_google_oauth2_omniauth_authorize_path, class: "btn btn-outline-dark col-md-6 mb-2" %>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
         <div class="form-group">
           <%= f.label :email %>
