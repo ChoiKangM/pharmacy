@@ -1,7 +1,7 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'],
       {
-        scope: 'email, profile, https://www.googleapis.com/auth/',
+        scope: 'email, profile, http://fffff.knup.co.kr/users/auth/google_oauth2',
         prompt: 'select_account',
         redirect_uri: 'http://fffff.knup.co.kr/users/auth/google_oauth2/callback',
         image_size: 200,
