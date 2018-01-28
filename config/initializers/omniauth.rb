@@ -4,7 +4,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       {
         scope: 'email, profile',
         prompt: 'select_account',
-        redirect_uri: 'http://fffff.knup.co.kr/users/auth/google_oauth2/callback',
+        redirect_uri: 'http://fffff.knup.co.kr//introductions/user_information',
         image_size: 200,
         image_aspect_ratio: 'square',
          
