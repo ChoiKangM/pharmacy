@@ -8,7 +8,14 @@ Rails.application.routes.draw do
   resources :notices do
     resources :nreplies, only: [:create, :destroy]
   end
-  
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  resource :home, only: [:show]
+
+  root to: "home#show"
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   get '/introductions/user_information', to: 'introductions#user_information', as: 'user_information'
   root 'introductions#index'
